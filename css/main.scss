@@ -1,0 +1,8 @@
+@use 'variables';
+@use 'global';
+
+main {
+  h1 {
+    color: var(--text-color);
+  }
+}

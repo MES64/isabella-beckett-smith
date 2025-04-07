@@ -1,0 +1,12 @@
+:root {
+  --text-color: black;
+  --background-color: white;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+main h1 {
+  color: var(--text-color);
+}/*# sourceMappingURL=main.css.map */
