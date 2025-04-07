@@ -12,6 +12,7 @@ header {
     font-weight: bolder;
     font-size: 3rem;
     letter-spacing: 0.6rem;
+    color: var(--text-color);
   }
 
   nav ul {
@@ -19,11 +20,18 @@ header {
     gap: 3rem;
 
     li {
+      position: relative;
+
       a {
         font-size: 1.5rem;
       }
-      a.selected {
-        text-decoration: underline;
+      a.selected::before {
+        content: '';
+        position: absolute;
+        border-bottom: 2px solid black;
+        width: calc(100% + 2rem);
+        left: -1rem;
+        bottom: -1rem;
       }
     }
   }
