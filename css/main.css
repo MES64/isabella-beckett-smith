@@ -1,7 +1,7 @@
 :root {
   --text-color: black;
   --background-color: white;
-  --link-color: grey;
+  --link-color: black;
 }
 
 html {
@@ -51,6 +51,29 @@ p {
     padding: 0 10rem;
   }
 }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 10rem;
+}
+header a.logo {
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 3rem;
+  letter-spacing: 0.6rem;
+}
+header nav ul {
+  display: flex;
+  gap: 3rem;
+}
+header nav ul li a {
+  font-size: 1.5rem;
+}
+header nav ul li a.selected {
+  text-decoration: underline;
+}
+
 main {
   display: flex;
   justify-content: center;

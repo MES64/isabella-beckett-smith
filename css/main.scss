@@ -1,6 +1,34 @@
 @use 'variables';
 @use 'global';
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 10rem;
+
+  a.logo {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 3rem;
+    letter-spacing: 0.6rem;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 3rem;
+
+    li {
+      a {
+        font-size: 1.5rem;
+      }
+      a.selected {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
 main {
   display: flex;
   justify-content: center;
