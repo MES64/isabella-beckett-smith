@@ -7,6 +7,12 @@ body {
   background-color: var(--background-color);
 }
 
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 main h1 {
   color: var(--text-color);
 }/*# sourceMappingURL=main.css.map */
