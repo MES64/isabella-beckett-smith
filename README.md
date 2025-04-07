@@ -1,1 +1,3 @@
-# isabella-beckett-smith
+# Isabella Beckett-Smith
+
+Philosophy website
