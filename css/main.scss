@@ -25,10 +25,19 @@ header {
       a {
         font-size: 1.5rem;
       }
+      a:not(.selected):hover::before {
+        content: '';
+        position: absolute;
+        border-bottom: 2px solid var(--highlight-color);
+        width: calc(100% + 2rem);
+        left: -1rem;
+        bottom: -1rem;
+        animation: highlight 0.1s ease-in-out;
+      }
       a.selected::before {
         content: '';
         position: absolute;
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid var(--text-color);
         width: calc(100% + 2rem);
         left: -1rem;
         bottom: -1rem;
@@ -47,5 +56,18 @@ main {
     color: var(--text-color);
     font-weight: normal;
     font-size: 4rem;
+  }
+}
+
+/* Keyframes */
+
+@keyframes highlight {
+  from { 
+    width: 0;
+    left: 50%;
+  }
+  to {
+    width: calc(100% + 2rem);
+    left: -1rem;
   }
 }
