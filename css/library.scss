@@ -1,0 +1,15 @@
+@use 'variables';
+@use 'global';
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+
+  h1 {
+    color: var(--text-color);
+    font-weight: normal;
+    font-size: 4rem;
+  }
+}

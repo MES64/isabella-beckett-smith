@@ -28,6 +28,66 @@ p {
   padding: 0;
 }
 
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 10rem;
+
+  a.logo {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 3rem;
+    letter-spacing: 0.6rem;
+    color: var(--text-color);
+  }
+
+  nav ul {
+    display: flex;
+    gap: 3rem;
+
+    li {
+      position: relative;
+
+      a {
+        font-size: 1.5rem;
+      }
+      a:not(.selected):hover::before {
+        content: '';
+        position: absolute;
+        border-bottom: 2px solid var(--highlight-color);
+        width: calc(100% + 2rem);
+        left: -1rem;
+        bottom: -1rem;
+        animation: highlight 0.1s ease-in-out;
+      }
+      a.selected::before {
+        content: '';
+        position: absolute;
+        border-bottom: 2px solid var(--text-color);
+        width: calc(100% + 2rem);
+        left: -1rem;
+        bottom: -1rem;
+      }
+    }
+  }
+}
+
+/* Keyframes */
+
+@keyframes highlight {
+  from { 
+    width: 0;
+    left: 50%;
+  }
+  to {
+    width: calc(100% + 2rem);
+    left: -1rem;
+  }
+}
+
 /* Utils and Wrapper */
 
 .wrapper {
