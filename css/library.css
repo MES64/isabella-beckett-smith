@@ -105,14 +105,50 @@ header nav ul li a.selected::before {
     padding: 0 10rem;
   }
 }
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
+main.wrapper {
+  margin-bottom: 5rem;
 }
-main h1 {
-  color: var(--text-color);
-  font-weight: normal;
+main.wrapper .shelf {
+  margin-top: 5rem;
+  display: flex;
+  gap: 1rem;
+}
+main.wrapper .shelf .book {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50rem;
+  width: 100%;
+  cursor: pointer;
+  border-left: 2px solid var(--text-color);
+  border-bottom: 2px solid var(--text-color);
+  border-right: 10px double var(--text-color);
+  border-top: 10px solid var(--text-color);
+  border-radius: 1rem;
+  animation: pushing 0.5s ease-in-out;
+}
+main.wrapper .shelf .book p {
   font-size: 4rem;
+  text-align: center;
+}
+main.wrapper .shelf .book:hover {
+  border-top-width: 20px;
+  animation: pulling 0.5s ease-in-out;
+}
+
+@keyframes pulling {
+  from {
+    border-top-width: 10px;
+  }
+  to {
+    border-top-width: 20px;
+  }
+}
+@keyframes pushing {
+  from {
+    border-top-width: 20px;
+  }
+  to {
+    border-top-width: 10px;
+  }
 }/*# sourceMappingURL=library.css.map */
