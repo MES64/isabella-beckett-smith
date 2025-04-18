@@ -106,10 +106,17 @@ header nav ul li a.selected::before {
   }
 }
 main.wrapper {
-  margin-bottom: 5rem;
+  position: relative;
+}
+main.wrapper .shelf.one {
+  position: absolute;
+  top: 50px;
+}
+main.wrapper .shelf.two {
+  position: absolute;
+  top: 600px;
 }
 main.wrapper .shelf {
-  margin-top: 5rem;
   display: flex;
   gap: 1rem;
 }
@@ -119,36 +126,40 @@ main.wrapper .shelf .book {
   justify-content: center;
   height: 50rem;
   width: 100%;
+  box-sizing: content-box;
   cursor: pointer;
-  border-left: 2px solid var(--text-color);
-  border-bottom: 2px solid var(--text-color);
-  border-right: 10px double var(--text-color);
-  border-top: 10px solid var(--text-color);
+  border-left: 0.2rem solid var(--text-color);
+  border-bottom: 0.2rem solid var(--text-color);
+  border-right: 0.2rem solid var(--text-color);
+  border-top: 0.2rem solid var(--text-color);
   border-radius: 1rem;
   animation: pushing 0.5s ease-in-out;
 }
 main.wrapper .shelf .book p {
   font-size: 4rem;
   text-align: center;
+  padding: 5rem 0;
+  border-top: 1rem double var(--text-color);
+  border-bottom: 1rem double var(--text-color);
 }
 main.wrapper .shelf .book:hover {
-  border-top-width: 20px;
+  border-top-width: 2rem;
   animation: pulling 0.5s ease-in-out;
 }
 
 @keyframes pulling {
   from {
-    border-top-width: 10px;
+    border-top-width: 0.2rem;
   }
   to {
-    border-top-width: 20px;
+    border-top-width: 2rem;
   }
 }
 @keyframes pushing {
   from {
-    border-top-width: 20px;
+    border-top-width: 2rem;
   }
   to {
-    border-top-width: 10px;
+    border-top-width: 0.2rem;
   }
 }/*# sourceMappingURL=library.css.map */
