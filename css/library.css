@@ -105,14 +105,27 @@ header nav ul li a.selected::before {
     padding: 0 10rem;
   }
 }
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
+main.wrapper {
+  margin-bottom: 5rem;
 }
-main h1 {
+main.wrapper h1 {
   color: var(--text-color);
   font-weight: normal;
   font-size: 4rem;
+}
+main.wrapper h2 {
+  font-size: 2.4rem;
+}
+main.wrapper h3 {
+  font-size: 2rem;
+}
+main.wrapper p {
+  font-size: 1.6rem;
+}
+main.wrapper a {
+  font-size: 1.6rem;
+  text-decoration: underline;
+}
+main.wrapper li {
+  margin: 1rem 0;
 }/*# sourceMappingURL=library.css.map */
