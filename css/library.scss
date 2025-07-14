@@ -1,60 +1,15 @@
 @use 'variables';
 @use 'global';
 
-main.wrapper {
-  position: relative;
-  //margin-bottom: 5rem;
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
 
-  .shelf.one {
-    position: absolute;
-    top: 50px;
+  h1 {
+    color: var(--text-color);
+    font-weight: normal;
+    font-size: 4rem;
   }
-
-  .shelf.two {
-    position: absolute;
-    top: 600px;
-  }
-
-  .shelf {
-    display: flex;
-    gap: 1rem;
-
-    .book {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 50rem;
-      width: 100%;
-      box-sizing: content-box;
-      cursor: pointer;
-      border-left: 0.2rem solid var(--text-color);
-      border-bottom: 0.2rem solid var(--text-color);
-      border-right: 0.2rem solid var(--text-color);
-      border-top: 0.2rem solid var(--text-color);
-      border-radius: 1rem;
-      animation: pushing 0.5s ease-in-out;
-
-      p {
-        font-size: 4rem;
-        text-align: center;
-        padding: 5rem 0;
-        border-top: 1rem double var(--text-color);
-        border-bottom: 1rem double var(--text-color);
-      }
-    }
-    .book:hover {
-      border-top-width: 2rem;
-      animation: pulling 0.5s ease-in-out;
-    }
-  }
-}
-
-@keyframes pulling {
-  from { border-top-width: 0.2rem; }
-  to { border-top-width: 2rem; }
-}
-
-@keyframes pushing {
-  from { border-top-width: 2rem; }
-  to { border-top-width: 0.2rem; }
 }

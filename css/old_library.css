@@ -105,14 +105,61 @@ header nav ul li a.selected::before {
     padding: 0 10rem;
   }
 }
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
+main.wrapper {
+  position: relative;
 }
-main h1 {
-  color: var(--text-color);
-  font-weight: normal;
+main.wrapper .shelf.one {
+  position: absolute;
+  top: 50px;
+}
+main.wrapper .shelf.two {
+  position: absolute;
+  top: 600px;
+}
+main.wrapper .shelf {
+  display: flex;
+  gap: 1rem;
+}
+main.wrapper .shelf .book {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50rem;
+  width: 100%;
+  box-sizing: content-box;
+  cursor: pointer;
+  border-left: 0.2rem solid var(--text-color);
+  border-bottom: 0.2rem solid var(--text-color);
+  border-right: 0.2rem solid var(--text-color);
+  border-top: 0.2rem solid var(--text-color);
+  border-radius: 1rem;
+  animation: pushing 0.5s ease-in-out;
+}
+main.wrapper .shelf .book p {
   font-size: 4rem;
-}/*# sourceMappingURL=library.css.map */
+  text-align: center;
+  padding: 5rem 0;
+  border-top: 1rem double var(--text-color);
+  border-bottom: 1rem double var(--text-color);
+}
+main.wrapper .shelf .book:hover {
+  border-top-width: 2rem;
+  animation: pulling 0.5s ease-in-out;
+}
+
+@keyframes pulling {
+  from {
+    border-top-width: 0.2rem;
+  }
+  to {
+    border-top-width: 2rem;
+  }
+}
+@keyframes pushing {
+  from {
+    border-top-width: 2rem;
+  }
+  to {
+    border-top-width: 0.2rem;
+  }
+}/*# sourceMappingURL=old_library.css.map */
