@@ -1,0 +1,26 @@
+@use 'variables';
+@use 'global';
+
+main.wrapper {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  min-height: 60vh;
+  background: no-repeat 90% 0% url('../assets/open_book.svg');
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+      font-size: 2rem;
+  }
+
+  a {
+    font-size: 1.6rem;
+    text-decoration: underline;
+  }
+
+  li {
+    margin: 1rem 0;
+  }
+}
