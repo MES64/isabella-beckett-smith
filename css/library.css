@@ -3,6 +3,8 @@
   --background-color: white;
   --link-color: rgb(50, 50, 50);
   --highlight-color: rgb(120, 120, 120);
+  --shadow-color: rgb(224, 224, 224);
+  --border-color: rgb(243, 243, 243);
 }
 
 html {
@@ -107,6 +109,7 @@ header nav ul li a.selected::before {
 }
 main.wrapper {
   margin-bottom: 5rem;
+  background: no-repeat 90% 0% url("../assets/open_book.svg");
 }
 main.wrapper h1 {
   color: var(--text-color);
@@ -123,13 +126,14 @@ main.wrapper p {
   font-size: 1.6rem;
 }
 main.wrapper p.currently-reading {
-  box-shadow: 1rem 1rem 1rem rgb(224, 224, 224);
-  border: 1px solid rgb(243, 243, 243);
+  box-shadow: 1rem 1rem 1rem var(--shadow-color);
+  border: 1px solid var(--border-color);
   border-radius: 0.5rem;
   width: -moz-fit-content;
   width: fit-content;
   margin: 3rem 0;
   padding: 2rem 5rem;
+  background-color: var(--background-color);
 }
 main.wrapper a {
   font-size: 1.6rem;
