@@ -161,13 +161,13 @@ main.wrapper div.cards a:hover {
   box-shadow: 0.5rem 0.5rem 0.5rem var(--shadow-color);
   animation: pushing 0.25s ease-in-out;
 }
-main.wrapper div.cards a.blog2 {
+main.wrapper div.cards a.card2 {
   background-position: 0% 100%;
 }
-main.wrapper div.cards a.blog3 {
+main.wrapper div.cards a.card3 {
   background-position: 100% 0%;
 }
-main.wrapper div.cards a.blog4 {
+main.wrapper div.cards a.card4 {
   background-position: 100% 100%;
 }
 
