@@ -139,7 +139,7 @@ main.wrapper {
 main.wrapper h1 {
   font-size: 2.4rem;
 }
-main.wrapper a {
+main.wrapper a.typed {
   margin: 4rem auto;
   padding: 2rem;
   display: block;
@@ -151,7 +151,7 @@ main.wrapper a {
   background-color: var(--background-color);
   animation: pulling 0.25s ease-in-out;
 }
-main.wrapper a p.currently-reading {
+main.wrapper a.typed p.currently-reading {
   color: var(--text-color);
   font-weight: normal;
   font-size: 4rem;
@@ -160,9 +160,19 @@ main.wrapper a p.currently-reading {
   border-right: 0.3rem solid var(--text-color);
   animation: waiting 0.5s step-end, typing 3.5s steps(30, end) 0.5s, blinking 1s step-end 4.5s infinite;
 }
-main.wrapper a:hover {
+main.wrapper a.typed:hover {
   box-shadow: 0.5rem 0.5rem 0.5rem var(--shadow-color);
   animation: pushing 0.25s ease-in-out;
+}
+main.wrapper h2 {
+  font-size: 2rem;
+}
+main.wrapper ul li {
+  margin: 1rem 0;
+}
+main.wrapper ul li a {
+  font-size: 1.6rem;
+  text-decoration: underline;
 }
 
 @keyframes waiting {

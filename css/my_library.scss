@@ -11,7 +11,7 @@ main.wrapper {
     font-size: 2.4rem;
   }
 
-  a {
+  a.typed {
     margin: 4rem auto;
     padding: 2rem;
     display: block;
@@ -35,9 +35,22 @@ main.wrapper {
         blinking 1s step-end 4.5s infinite;
     }
   }
-  a:hover {
+  a.typed:hover {
     box-shadow: 0.5rem 0.5rem 0.5rem var(--shadow-color);
     animation: pushing 0.25s ease-in-out;
+  }
+
+  h2 {
+      font-size: 2rem;
+  }
+
+  ul li {
+    margin: 1rem 0;
+
+    a {
+      font-size: 1.6rem;
+      text-decoration: underline;
+    }
   }
 }
 
