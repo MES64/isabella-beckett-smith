@@ -11,18 +11,57 @@ main.wrapper {
     font-size: 2.4rem;
   }
 
-  p.currently-reading {
+  a {
+    margin: 4rem auto;
+    padding: 2rem;
+    display: block;
+    width: fit-content;
     box-shadow: 1rem 1rem 1rem var(--shadow-color);
     border: 1px solid var(--border-color);
-    border-radius: 0.5rem;
-    width: fit-content;
-    margin: 3rem 0;
-    padding: 2rem 5rem;
+    border-radius: 0.8rem;
     background-color: var(--background-color);
-  }
+    animation: pulling 0.25s ease-in-out;
 
-  a {
-    font-size: 1.6rem;
-    text-decoration: underline;
+    p.currently-reading {
+      color: var(--text-color);
+      font-weight: normal;
+      font-size: 4rem;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: .3rem solid var(--text-color);
+      animation:
+        waiting 0.5s step-end,
+        typing 3.5s steps(30, end) 0.5s,
+        blinking 1s step-end 4.5s infinite;
+    }
   }
+  a:hover {
+    box-shadow: 0.5rem 0.5rem 0.5rem var(--shadow-color);
+    animation: pushing 0.25s ease-in-out;
+  }
+}
+
+@keyframes waiting {
+  from { width: 0.1%; }
+  to { width: 0.1%; }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100% }
+}
+
+@keyframes blinking {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--text-color); }
+}
+
+@keyframes pushing {
+  from { box-shadow: 1rem 1rem 1rem var(--shadow-color); }
+  to { box-shadow: 0.5rem 0.5rem 0.5rem var(--shadow-color); }
+}
+
+@keyframes pulling {
+  from { box-shadow: 0.5rem 0.5rem 0.5rem var(--shadow-color); }
+  to { box-shadow: 1rem 1rem 1rem var(--shadow-color); }
 }

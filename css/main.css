@@ -132,12 +132,15 @@ header nav ul li.library-nav:hover div {
 }
 main {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 80vh;
+  justify-content: center;
+  height: 60vh;
+}
+main div {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 main div h1 {
-  margin: 0 auto;
   color: var(--text-color);
   font-weight: normal;
   font-size: 4rem;
@@ -149,10 +152,10 @@ main div h1 {
 
 @keyframes waiting {
   from {
-    width: 0;
+    width: 0.1%;
   }
   to {
-    width: 0;
+    width: 0.1%;
   }
 }
 @keyframes typing {
