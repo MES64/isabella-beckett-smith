@@ -11,16 +11,9 @@ main.wrapper {
     font-size: 2.4rem;
   }
 
-  a.typed {
+  div.typed {
     margin: 4rem auto;
-    padding: 2rem;
-    display: block;
     width: fit-content;
-    box-shadow: 1rem 1rem 1rem var(--shadow-color);
-    border: 1px solid var(--border-color);
-    border-radius: 0.8rem;
-    background-color: var(--background-color);
-    animation: pulling 0.25s ease-in-out;
 
     p.currently-reading {
       color: var(--text-color);
@@ -34,10 +27,6 @@ main.wrapper {
         typing 3.5s steps(30, end) 0.5s,
         blinking 1s step-end 4.5s infinite;
     }
-  }
-  a.typed:hover {
-    box-shadow: 0.5rem 0.5rem 0.5rem var(--shadow-color);
-    animation: pushing 0.25s ease-in-out;
   }
 
   h2 {
@@ -67,14 +56,4 @@ main.wrapper {
 @keyframes blinking {
   from, to { border-color: transparent; }
   50% { border-color: var(--text-color); }
-}
-
-@keyframes pushing {
-  from { box-shadow: 1rem 1rem 1rem var(--shadow-color); }
-  to { box-shadow: 0.5rem 0.5rem 0.5rem var(--shadow-color); }
-}
-
-@keyframes pulling {
-  from { box-shadow: 0.5rem 0.5rem 0.5rem var(--shadow-color); }
-  to { box-shadow: 1rem 1rem 1rem var(--shadow-color); }
 }
